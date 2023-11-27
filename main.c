@@ -24,3 +24,20 @@ void calcularTranspuesta(int matriz[MAX_FILAS][MAX_COLUMNAS], int transpuesta[MA
         }
     }
 }
+
+int main() {
+    int filas, columnas;
+
+    //Peticion de datos para el programa
+    printf("Ingresar el numero de filas de la matriz: ");
+    scanf("%d", &filas);
+
+    printf("Ingresar el numero de columnas de la matriz: ");
+    scanf("%d", &columnas);
+
+    //Verificacion de que en numero de filas y columnas no exeda a lo pedido
+    if (filas > MAX_FILAS || columnas > MAX_COLUMNAS) {
+        printf("Error: Las dimensiones de la matriz exceden los limites.\n");
+        return 1;
+    }
+}
