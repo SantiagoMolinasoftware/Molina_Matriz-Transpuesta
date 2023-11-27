@@ -40,4 +40,18 @@ int main() {
         printf("Error: Las dimensiones de la matriz exceden los limites.\n");
         return 1;
     }
+    
+    //Declaracion de las matrices
+    int matriz[MAX_FILAS][MAX_COLUMNAS];
+    int transpuesta[MAX_COLUMNAS][MAX_FILAS];
+
+    //Inicializa el generador de numeros aleatorios mediante (time.h)
+    srand(time(NULL));
+
+    //Llena la matriz con numeros aleatorios entre 0 y 100
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            matriz[i][j] = rand() % 101;  //Numeros aleatorios entre 0 y 100
+        }
+    }
 }
