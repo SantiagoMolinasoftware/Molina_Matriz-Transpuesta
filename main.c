@@ -40,7 +40,7 @@ int main() {
         printf("Error: Las dimensiones de la matriz exceden los limites.\n");
         return 1;
     }
-    
+
     //Declaracion de las matrices
     int matriz[MAX_FILAS][MAX_COLUMNAS];
     int transpuesta[MAX_COLUMNAS][MAX_FILAS];
@@ -54,4 +54,19 @@ int main() {
             matriz[i][j] = rand() % 101;  //Numeros aleatorios entre 0 y 100
         }
     }
+    
+    //Llamada a las funciones
+
+    // Calcular la matriz transpuesta
+    calcularTranspuesta(matriz, transpuesta, filas, columnas);
+
+    // Imprimir la matriz original
+    printf("\nMatriz Original:\n");
+    imprimirMatriz(matriz, filas, columnas);
+
+    // Imprimir la matriz transpuesta
+    printf("\nMatriz Transpuesta:\n");
+    imprimirMatriz(transpuesta, columnas, filas);
+
+    return 0;
 }
